@@ -26,6 +26,13 @@
         .clip-slant {
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
+        /* Smooth animation for FAQ details */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -263,7 +270,7 @@
     <section id="areas" class="py-20 bg-white">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <img src="Areas_we_cover.webp" alt="Roofing Repairs Worcester" class="rounded-xl shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1628135899933-7287954933a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Roofing Repairs Worcester" class="rounded-xl shadow-2xl">
             </div>
             <div>
                 <h2 class="text-3xl font-bold text-slate-900 mb-6">Areas We Cover</h2>
@@ -358,6 +365,109 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h3 class="text-amber-600 font-bold uppercase tracking-wider text-sm mb-2">Common Questions</h3>
+                <h2 class="text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">Do you charge for estimates or call-outs?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        No, we do not charge for call-outs. We offer completely free, no-obligation quotes for all jobs, whether it's a small repair or a full roof replacement.
+                    </p>
+                </details>
+
+                <!-- Question 2 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">Which areas do you serve?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        We cover all of Worcestershire and Warwickshire. This includes Worcester, Stratford-upon-Avon, Redditch, Bromsgrove, Evesham, Droitwich, Kenilworth, Warwick, and Leamington Spa.
+                    </p>
+                </details>
+
+                <!-- Question 3 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">Is your roofing work guaranteed?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        Yes, absolutely. All our work comes with a 100% workmanship guarantee for your peace of mind. We stand by the quality of our repairs and replacements.
+                    </p>
+                </details>
+
+                <!-- Question 4 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">What types of flat roofing do you install?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        We specialize in both Rubber (EPDM) and Torch-on Felt roofing systems. These durable options are ideal for garages, extensions, and outbuildings, providing long-lasting waterproofing.
+                    </p>
+                </details>
+
+                <!-- Question 5 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">Can you fix a small leak or slipped tile?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        Absolutely. No job is too small for us. We handle everything from minor repairs, like replacing a single slipped tile or fixing a small leak, to full roof replacements.
+                    </p>
+                </details>
+
+                <!-- Question 6 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">Do you replace gutters and fascias?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        Yes, we provide full installation of modern uPVC fascias, soffits, and guttering systems. This not only improves the look of your home but protects it from water damage.
+                    </p>
+                </details>
+
+                <!-- Question 7 -->
+                <details class="group bg-white rounded-lg shadow-sm p-4 [&_summary::-webkit-details-marker]:hidden open:ring-2 open:ring-blue-100 transition">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-900 font-bold">
+                        <h3 class="text-lg">How experienced is your team?</h3>
+                        <div class="white-space-nowrap text-slate-500 transition group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </div>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-600">
+                        We have over 30 years of experience in the roofing trade. Our team is highly skilled, professional, and dedicated to delivering high-quality workmanship on every project.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer / Contact -->
     <footer class="bg-slate-900 text-white py-12 px-6">
       <div class="mx-auto max-w-6xl">
@@ -411,6 +521,7 @@
 
         <div class="mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
           <p>&copy; 2026 Roofing Repairs. 30 Years of Trade Experience. All Rights Reserved.</p>
+          <p class="mt-2">Website created by <a href="https://www.roofflowai.co.uk" target="_blank" class="text-slate-400 hover:text-white transition">RoofFlow AI</a></p>
         </div>
       </div>
     </footer>
@@ -434,7 +545,7 @@
             btn.innerText = 'Sending...';
             btn.disabled = true;
 
-            fetch('https://primary-production-58a3.up.railway.app/webhook-test/5614f93c-b097-457d-899e-c6216dbb2dd1', {
+            fetch('https://primary-production-58a3.up.railway.app/webhook/5614f93c-b097-457d-899e-c6216dbb2dd1', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -461,4 +572,3 @@
     </script>
 </body>
 </html>
-
