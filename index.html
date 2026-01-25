@@ -107,26 +107,26 @@
                 <h3 class="text-2xl font-bold text-blue-900 mb-1">Get Your Free Quote</h3>
                 <p class="text-slate-500 text-sm mb-6">Fast response guaranteed. No obligation.</p>
                 
-                <form onsubmit="event.preventDefault(); alert('Thank you! Your details have been sent to Roofing Repairs. We will call you shortly.');" class="space-y-4">
+                <form id="leadForm" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Name</label>
-                            <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="Your Name">
+                            <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="Your Name">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Postcode</label>
-                            <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="e.g. WR11">
+                            <input type="text" name="postcode" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="e.g. WR11">
                         </div>
                     </div>
                     
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Phone Number</label>
-                        <input type="tel" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="07...">
+                        <input type="tel" name="phone" required class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition" placeholder="07...">
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Service Needed</label>
-                        <select class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition">
+                        <select name="service" class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition">
                             <option>Roof Repair / Leak</option>
                             <option>Full Roof Replacement</option>
                             <option>Chimney Repair</option>
@@ -138,7 +138,7 @@
 
                     <div>
                         <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Estimated Budget (Optional)</label>
-                        <select class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition">
+                        <select name="budget" class="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:outline-none focus:border-blue-500 transition">
                             <option value="">Select Budget...</option>
                             <option>Under £1,000</option>
                             <option>£1,000 - £5,000</option>
@@ -412,6 +412,46 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Handle Form Submission with Webhook
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+            
+            // Button loading state
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            fetch('https://primary-production-58a3.up.railway.app/webhook-test/5614f93c-b097-457d-899e-c6216dbb2dd1', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your details have been sent to Roofing Repairs. We will call you shortly.');
+                    this.reset();
+                } else {
+                    alert('There was a problem sending your request. Please call us directly on 07351 494077.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem sending your request. Please call us directly on 07351 494077.');
+            })
+            .finally(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
+        });
     </script>
 </body>
 </html>
