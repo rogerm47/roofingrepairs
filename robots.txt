@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap location
+Sitemap: https://www.google.com/search?q=https://www.roofingrepairs247.co.uk/sitemap.xml
