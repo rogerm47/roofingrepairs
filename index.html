@@ -50,50 +50,36 @@
 
     <!-- Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <!-- Changed layout: Fixed height (h-24 mobile, h-32 desktop), removed py-4 padding to let logo fill space -->
-        <div class="container mx-auto px-4 relative flex items-center justify-end h-24 md:h-32">
+        <!-- Layout container: Flexbox with justify-between pushes content to edges -->
+        <div class="container mx-auto px-4 relative flex items-center justify-between h-24 md:h-32">
             
-            <!-- LEFT SIDE CONTENT (Desktop Only - New Addition) -->
-            <!-- Positioned absolutely to the left -->
-            <div class="hidden lg:flex flex-col justify-center absolute left-4 top-0 bottom-0 z-20">
-                <div class="flex items-center text-slate-600 text-sm font-semibold mb-1 group">
-                    <div class="bg-blue-50 p-1.5 rounded-full mr-2 group-hover:bg-blue-100 transition-colors">
-                        <i data-lucide="shield-check" class="w-4 h-4 text-blue-900"></i>
-                    </div>
-                    <span>Fully Insured</span>
-                </div>
-                <div class="flex items-center text-slate-600 text-sm font-semibold group">
-                    <div class="bg-amber-50 p-1.5 rounded-full mr-2 group-hover:bg-amber-100 transition-colors">
-                        <i data-lucide="star" class="w-4 h-4 text-amber-500"></i>
-                    </div>
-                    <span>Google 5.0 Rated</span>
-                </div>
-            </div>
-
-            <!-- CENTERED LOGO SECTION -->
-            <!-- Positioned absolutely to be perfectly in the middle and fill height -->
-            <div class="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 h-full flex items-center justify-center z-10">
-                <a href="#" class="h-full flex items-center">
-                    <!-- Logo set to h-full (100% height of parent) and object-contain to scale correctly -->
-                    <img src="logo_rr247.jpg" alt="Roofing Repairs 247 Logo" class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300">
-                </a>
-            </div>
-
-            <!-- Desktop Navigation (Pushed to the right) -->
-            <nav class="hidden md:flex space-x-6 font-medium text-slate-700 items-center bg-white/80 backdrop-blur pl-4 rounded-l-lg">
+            <!-- LEFT SIDE: Navigation Links (Moved from right) -->
+            <nav class="hidden md:flex space-x-6 font-medium text-slate-700 z-20">
                 <a href="#services" class="hover:text-blue-900 transition">Services</a>
                 <a href="#areas" class="hover:text-blue-900 transition">Areas Covered</a>
                 <a href="#gallery" class="hover:text-blue-900 transition">Gallery</a>
                 <a href="#reviews" class="hover:text-blue-900 transition">Reviews</a>
-                <a href="#quote" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded shadow transition ml-4">
+            </nav>
+
+            <!-- CENTER: Logo (Absolute positioning keeps it perfectly centered) -->
+            <div class="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 h-full flex items-center justify-center z-10">
+                <a href="#" class="h-full flex items-center">
+                    <img src="logo_rr247.webp" alt="Roofing Repairs 247 Logo" class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300">
+                </a>
+            </div>
+
+            <!-- RIGHT SIDE: CTA Button & Mobile Menu Trigger -->
+            <div class="flex items-center z-20 ml-auto md:ml-0">
+                <!-- CTA Button (Visible on desktop) -->
+                <a href="#quote" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded shadow transition hidden md:block">
                     Get Free Quote
                 </a>
-            </nav>
-            
-            <!-- Mobile Menu Button (Pushed to the right) -->
-            <button class="md:hidden text-slate-700 z-20 relative" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
-                <i data-lucide="menu" class="w-8 h-8"></i>
-            </button>
+                
+                <!-- Mobile Menu Button (Visible on mobile) -->
+                <button class="md:hidden text-slate-700 ml-4" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Nav Dropdown -->
