@@ -50,14 +50,15 @@
 
     <!-- Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <!-- Added relative positioning and min-height to accommodate absolute centered logo -->
-        <div class="container mx-auto px-4 py-4 relative flex items-center justify-end min-h-[88px]">
+        <!-- Changed layout: Fixed height (h-24 mobile, h-32 desktop), removed py-4 padding to let logo fill space -->
+        <div class="container mx-auto px-4 relative flex items-center justify-end h-24 md:h-32">
             
             <!-- CENTERED LOGO SECTION -->
-            <!-- Positioned absolutely to be perfectly in the middle -->
-            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <a href="#">
-                    <img src="logo_rr247.webp" alt="Roofing Repairs 247 Logo" class="h-20 md:h-24 w-auto object-contain hover:scale-105 transition-transform duration-300">
+            <!-- Positioned absolutely to be perfectly in the middle and fill height -->
+            <div class="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 h-full flex items-center justify-center z-10">
+                <a href="#" class="h-full flex items-center">
+                    <!-- Logo set to h-full (100% height of parent) and object-contain to scale correctly -->
+                    <img src="logo_rr247.jpg" alt="Roofing Repairs 247 Logo" class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
 
@@ -579,4 +580,3 @@
     </script>
 </body>
 </html>
-
