@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Roofing Projects in Worcestershire & Warwickshire</title>
+    <meta name="description" content="View our recent roofing projects across Worcester, Evesham, and Stratford. 30 years of quality workmanship in every tile and gutter replacement.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .project-card:hover img { transform: scale(1.05); transition: all 0.5s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="logo_rr247.webp" alt="Logo" class="h-12 w-auto">
+                <span class="font-extrabold text-blue-900 text-xl hidden sm:block uppercase tracking-tight">Roofing Repairs 24/7</span>
+            </a>
+            <nav class="flex space-x-6 font-medium text-slate-700">
+                <a href="index.html" class="hover:text-blue-900 transition">Home</a>
+                <a href="index.html#services" class="hover:text-blue-900 transition">Services</a>
+                <a href="#quote" class="bg-amber-500 text-white px-4 py-2 rounded font-bold text-sm hover:bg-amber-600 transition">Get Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-amber-400">Our Recent Projects</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto font-light">
+                Take a look at how we’ve been protecting homes across Worcester and Evesham for over 3 decades. Real work, real results.
+            </p>
+        </div>
+    </section>
+
+    <main class="py-20 container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <article class="project-card bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="image_7.png" alt="Tiled Roof Repair Worcester" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Worcester (WR4)</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-tight">Full Fascia & Gutter Upgrade</h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                        We replaced rotten timber boards with modern, maintenance-free white UPVC. This homeowner in WR4 is now protected from damp for decades.
+                    </p>
+                    <div class="flex items-center text-amber-600 font-bold text-sm">
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> 30 Year Guarantee Applied
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="dry_ridge_system.webp" alt="Ridge Tile Repair" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Evesham (WR11)</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-tight">Ridge Tile Security</h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                        Storm damage in Evesham led to loose ridge tiles. We installed a modern dry-ridge system to ensure maximum safety and zero future leaks.
+                    </p>
+                    <div class="flex items-center text-amber-600 font-bold text-sm">
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> Completed in 1 Day
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="flat_roof_worcester.webp" alt="Flat Roof EPDM" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Stratford-upon-Avon</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-tight">EPDM Rubber Extension</h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                        A full flat roof replacement for a kitchen extension. Seamless rubber membrane providing a 100% waterproof seal.
+                    </p>
+                    <div class="flex items-center text-amber-600 font-bold text-sm">
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> No Maintenance Required
+                    </div>
+                </div>
+            </article>
+
+            </div>
+    </main>
+
+    <section id="quote" class="bg-blue-900 text-white py-20 text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl font-bold mb-6 italic">Need a local expert you can trust?</h2>
+            <p class="mb-10 text-blue-100">Contact Richard today for a free, no-obligation estimate in the Worcester or Evesham area.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:07351494077" class="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-lg font-extrabold text-xl shadow-lg transition">Call 07351 494077</a>
+                <a href="index.html#quote" class="bg-white text-blue-900 px-10 py-4 rounded-lg font-bold text-xl hover:bg-slate-100 transition">Back to Main Site</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-500 py-10 text-center border-t border-slate-800">
+        <p>&copy; 2026 Roofing Repairs. 30 Years of Experience. WR11 8UZ.</p>
+        <p class="text-xs mt-2 italic">Website by <a href="https://roofflowai.co.uk" class="text-slate-400">RoofFlow AI</a></p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
